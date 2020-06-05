@@ -1,0 +1,7 @@
+C:\Users\User\source\repos\MangoOnlineShop\MangoOnlineShop\bin\Debug\MangoOnlineShop.exe.config
+C:\Users\User\source\repos\MangoOnlineShop\MangoOnlineShop\bin\Debug\MangoOnlineShop.exe
+C:\Users\User\source\repos\MangoOnlineShop\MangoOnlineShop\bin\Debug\MangoOnlineShop.pdb
+C:\Users\User\source\repos\MangoOnlineShop\MangoOnlineShop\obj\Debug\MangoOnlineShop.csprojAssemblyReference.cache
+C:\Users\User\source\repos\MangoOnlineShop\MangoOnlineShop\obj\Debug\MangoOnlineShop.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\MangoOnlineShop\MangoOnlineShop\obj\Debug\MangoOnlineShop.exe
+C:\Users\User\source\repos\MangoOnlineShop\MangoOnlineShop\obj\Debug\MangoOnlineShop.pdb
