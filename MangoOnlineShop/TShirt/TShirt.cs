@@ -20,7 +20,7 @@ namespace MangoOnlineShop
 
         public void Print()
         {
-            Console.WriteLine("{0} TShirt with size {1} and made by {2}", Color, Size, Fabric);
+            Console.WriteLine("{0} tshirt with size {1} and made by {2}", Color, Size, Fabric);
         }
     }
 

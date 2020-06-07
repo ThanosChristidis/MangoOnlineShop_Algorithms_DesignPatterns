@@ -5,7 +5,7 @@ namespace MangoOnlineShop
     class Basket
     {
         private PaymentMethod _paymentMethod;
-        private decimal _amount;
+        private decimal _dueAmount;
 
         public void SelectPaymentMethod(PaymentMethod paymentMethod)
         {
@@ -14,13 +14,13 @@ namespace MangoOnlineShop
 
         public void SetDueAmount(decimal amount)
         {
-            _amount = amount;
-            Console.WriteLine("The price of this product is: {0} euros", amount);
+            _dueAmount = amount;
+            Console.WriteLine("\tThe price of this product is: {0} euros", amount);
         }
 
         public bool Pay()
         {
-            return _paymentMethod.Pay(_amount);
+            return _paymentMethod.Pay(_dueAmount);
         }
     }
 
@@ -28,9 +28,9 @@ namespace MangoOnlineShop
     {
         public void BuyTShirt(TShirt shirt)
         {
-            var amount = Convert.ToDecimal(new ColorVariation().Cost(shirt));
-            amount += Convert.ToDecimal(new SizeVariation().Cost(shirt));
-            amount += Convert.ToDecimal(new FabricVariation().Cost(shirt));
+            var amount = Convert.ToDecimal(new ColorVariation().AddCost(shirt));
+            amount += Convert.ToDecimal(new SizeVariation().AddCost(shirt));
+            amount += Convert.ToDecimal(new FabricVariation().AddCost(shirt));
 
             var basket = new Basket();
             basket.SetDueAmount(amount);
@@ -41,12 +41,12 @@ namespace MangoOnlineShop
 
             if (basket.Pay())
             {
-                Console.WriteLine("Purchase completed!");
+                Console.WriteLine("\tPurchase completed!");
             }
             else
             {
-                Console.WriteLine("Purchase cancelled!");
-                Console.WriteLine("Pleaae try again.");
+                Console.WriteLine("\tPurchase cancelled!");
+                Console.WriteLine("\tPlease try again.");
             }
         }
     }

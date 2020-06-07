@@ -6,7 +6,7 @@ namespace MangoOnlineShop
 {
     abstract class Variation
     {
-        public abstract decimal Cost(TShirt shirt);
+        public abstract decimal AddCost(TShirt shirt);
     }
 
     class ColorVariation : Variation
@@ -17,19 +17,19 @@ namespace MangoOnlineShop
         {
             _colorCost = new Dictionary<Color, decimal>()
             {
-                {Color.RED, 1.9m },
-                {Color.ORANGE,1.44m },
-                {Color.YELLOW, 1.66m },
+                {Color.RED, 3.4m },
+                {Color.ORANGE, 5.44m },
+                {Color.YELLOW, 2.66m },
                 {Color.GREEN, 2m},
                 {Color.BLUE, 0m },
-                {Color.INDIGO, 3m },
-                {Color.VIOLET,4.1m }
+                {Color.INDIGO, 5m },
+                {Color.VIOLET,6.1m }
             };
         }
 
-        public override decimal Cost(TShirt shirt)
+        public override decimal AddCost(TShirt shirt)
         {
-            shirt.Price += _colorCost[shirt.Color];
+            shirt.Price = _colorCost[shirt.Color];
             return shirt.Price;
         }
 
@@ -44,18 +44,18 @@ namespace MangoOnlineShop
             _sizeCost = new Dictionary<Size, decimal>()
             {
                 {Size.XS, 0m },
-                {Size.S, 0.55m },
-                {Size.M, 1.23m },
-                {Size.L, 1.83m },
-                {Size.XL, 2.79m },
-                {Size.XXL, 3.88m },
-                {Size.XXXL, 5.25m }
+                {Size.S, 1.55m },
+                {Size.M, 2.23m },
+                {Size.L, 3.83m },
+                {Size.XL, 4.79m },
+                {Size.XXL, 5.88m },
+                {Size.XXXL, 7.25m }
             };
         }
 
-        public override decimal Cost(TShirt shirt)
+        public override decimal AddCost(TShirt shirt)
         {
-            shirt.Price += _sizeCost[shirt.Size];
+            shirt.Price = _sizeCost[shirt.Size];
             return shirt.Price;
         }
     }
@@ -70,15 +70,15 @@ namespace MangoOnlineShop
                 {Fabric.WOOL, 2.49m },
                 {Fabric.COTTON, 0m },
                 {Fabric.POLYESTER, 1.55m },
-                {Fabric.RAYON, 2.78m },
-                {Fabric.LINEN, 3.81m},
+                {Fabric.RAYON, 3.78m },
+                {Fabric.LINEN, 5.81m},
                 {Fabric.CASHMERE, 6.27m },
                 {Fabric.SILK, 9.34m }
             };
         }
-        public override decimal Cost(TShirt shirt)
+        public override decimal AddCost(TShirt shirt)
         {
-            shirt.Price += _fabricCost[shirt.Fabric];
+            shirt.Price = _fabricCost[shirt.Fabric];
             return shirt.Price;
         }
 

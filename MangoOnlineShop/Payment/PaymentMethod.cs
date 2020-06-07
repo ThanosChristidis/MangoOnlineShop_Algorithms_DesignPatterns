@@ -12,14 +12,14 @@ namespace MangoOnlineShop
     {
         public override bool Pay(decimal amount)
         {
-            if (amount < 0 || amount > 1000)
+            if (amount < 0 || amount >= 12)
             {
-                Console.WriteLine($"Cannot pay the amount of the {amount} euros using Card!");
+                Console.WriteLine($"\tCannot pay the amount of the {amount} euros using Card!");
                 return false;
             }
             else
             {
-                Console.WriteLine($"Pay the amount of the {amount} euros using Card!");
+                Console.WriteLine($"\tPay the amount of the {amount} euros using Card!");
                 return true;
             } 
         }
@@ -29,14 +29,14 @@ namespace MangoOnlineShop
     {
         public override bool Pay(decimal amount)
         {
-            if (amount < 0 || amount > 1000)
+            if (amount < 0 || amount > 17)
             {
-                Console.WriteLine($"Cannot pay the amount of the {amount}euros using Bank Tranfer!");
+                Console.WriteLine($"\tCannot pay the amount of the {amount} euros using Bank Tranfer!");
                 return false;
             }
             else
             {
-                Console.WriteLine($"Pay the amount of the {amount}euros using Bank Transfer!");
+                Console.WriteLine($"\tPay the amount of the {amount} euros using Bank Transfer!");
                 return true;
             }
         }
@@ -46,14 +46,14 @@ namespace MangoOnlineShop
     {
         public override bool Pay(decimal amount)
         {
-            if (amount < 0 || amount > 1000)
+            if (amount < 0 || amount >= 8)
             {
-                Console.WriteLine($"Cannot pay the amount of the {amount}euros using Cash!");
+                Console.WriteLine($"\tCannot pay the amount of the {amount} euros using Cash!");
                 return false;
             }
             else
             {
-                Console.WriteLine($"Pay the amount of the {amount}euros using Cash!");
+                Console.WriteLine($"\tPay the amount of the {amount} euros using Cash!");
                 return true;
             }
         }
@@ -82,7 +82,4 @@ namespace MangoOnlineShop
             
         }
     }
-
-
-
 }
